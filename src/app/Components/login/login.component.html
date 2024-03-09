@@ -1,0 +1,51 @@
+<div class="form-container container">
+  <div class="row w-100 justify-content-center">
+    <div class="col-md-8 col-lg-6 col-xl-5">
+      <div class="form">
+        <!-- <div class="img-hover-zoom">
+          <img src="assets/logo/Aman_Logo2.png" alt="Aman Logo" class="img-hover-zoom">
+        </div> -->
+        <h2 class="text-center my-2">Welcome Back in</h2>
+        <img src="https://assets.static-upwork.com/org-logo/1727306847512289280" width="600px" height="90px" style="display: block; margin-left: auto;
+        margin-right: auto; width: 50%;">
+        <form [formGroup]="loginform" (submit)="submitLogin()"> 
+          <mat-form-field class="example-full-width w-100" appearance="outline" >
+            <mat-label>User Name</mat-label>
+            <input formControlName="UserName" matInput placeholder="Enter your name" name="UserName"  />
+            <mat-error *ngIf="UserName.hasError('required')" class="my-1"> UserName Can't Be Emtpy </mat-error>
+        </mat-form-field> 
+        <div class="my-2">
+          <mat-form-field class="example-full-width w-100" appearance="outline">
+              <mat-label>Password</mat-label>
+                  <input
+                  [type]="type"
+                  formControlName="Password"
+                  matInput
+                  placeholder="Enter your password"
+                  type="password"/>
+                  <mat-error *ngIf="UserPassword.hasError('required')"> Please Enter Your Password </mat-error>
+                  <mat-error *ngIf="UserPassword.hasError('minLength')"> invalid Password</mat-error>
+                  <mat-icon class="example-icon"  matSuffix (click)="showPassword()" class="my-1">{{icon}}</mat-icon>
+          </mat-form-field>
+      </div>
+          <!-- <p class="text-end py-1 my-1 fs-5"><a class="text-secondary" data-bs-toggle="modal"
+              data-bs-target="#ForgetPassword">Forget Password</a></p> -->
+          <div class="submit mx-3 px-2">
+            <button type="submit" class="btn btn-custom py-1 fs-5 w-100 my-4 "
+              [disabled]="loginform.invalid">
+              <ng-container *ngIf="loading; else loginButtonContent">
+                <div class="lds-hourglass"></div>
+              </ng-container>
+              <ng-template #loginButtonContent>login</ng-template>
+            </button>
+            <button (click)="RegisterForm()" style="color: blue; text-align: center; margin-right: auto; margin-left: auto; display: block;">Register in Luftborn system</button>
+          </div>
+        </form>
+        <!-- <div class="text-center">
+          <p class="fs-5 ">You Dont Have An Account</p>
+          <a [routerLink]="['/register']" class="text-decoration-none text-info fs-5">Create New Account</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="form-container container">
+    <div class="row w-100 justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-5">
+        <div class="form">
+          <!-- <div class="img-hover-zoom">
+            <img src="assets/logo/Aman_Logo2.png" alt="Aman Logo" class="img-hover-zoom">
+          </div> -->
+          <h2 class="text-center my-2">Register in</h2>
+          <img src="https://assets.static-upwork.com/org-logo/1727306847512289280" width="500px" height="90px" style="display: block; margin-left: auto;
+          margin-right: auto; width: 50%;">
+          <form [formGroup]="registerform" (submit)="submitRegister()"> 
+
+            <mat-form-field class="example-full-width w-100" appearance="outline" >
+                <mat-label>First Name</mat-label>
+                <input formControlName="firstName" matInput placeholder="Enter your First Name" name="FirstName"  />
+                <mat-error *ngIf="Email.hasError('required')" class="my-1"> First Name Can't Be Emtpy </mat-error>
+            </mat-form-field> 
+
+            <mat-form-field class="example-full-width w-100" appearance="outline" >
+                <mat-label>Last Name</mat-label>
+                <input formControlName="lastName" matInput placeholder="Enter your Last Name" name="LastName"  />
+                <mat-error *ngIf="Email.hasError('required')" class="my-1"> Last Name Can't Be Emtpy </mat-error>
+            </mat-form-field> 
+
+            <mat-form-field class="example-full-width w-100" appearance="outline" >
+              <mat-label>Email</mat-label>
+              <input formControlName="email" matInput placeholder="Enter your email" name="Email"  />
+              <mat-error *ngIf="Email.hasError('required')" class="my-1"> Email Can't Be Emtpy </mat-error>
+          </mat-form-field> 
+
+          <div class="my-2">
+            <mat-form-field class="example-full-width w-100" appearance="outline">
+                <mat-label>Password</mat-label>
+                    <input
+                    [type]="type"
+                    formControlName="password"
+                    matInput
+                    placeholder="Enter your password"
+                    type="password"/>
+                    <mat-error *ngIf="UserPassword.hasError('required')"> Please Enter Your Password </mat-error>
+                    <mat-error *ngIf="UserPassword.hasError('minLength')"> invalid Password</mat-error>
+                    <mat-icon class="example-icon"  matSuffix (click)="showPassword()" class="my-1">{{icon}}</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width w-100" appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                    <input
+                    [type]="type"
+                    formControlName="confirmPassword"
+                    matInput
+                    placeholder="Enter your confirm password"
+                    type="password"/>
+                    <mat-error *ngIf="UserPassword.hasError('required')"> Please Enter Your Confirm Password </mat-error>
+                    <mat-error *ngIf="UserPassword.hasError('minLength')"> invalid Confirm Password</mat-error>
+                    <mat-icon class="example-icon"  matSuffix (click)="showPassword()" class="my-1">{{icon}}</mat-icon>
+            </mat-form-field>
+        </div>
+            <!-- <p class="text-end py-1 my-1 fs-5"><a class="text-secondary" data-bs-toggle="modal"
+                data-bs-target="#ForgetPassword">Forget Password</a></p> -->
+            <div class="submit mx-3 px-2">
+              <button type="submit" class="btn btn-custom py-1 fs-5 w-100 my-4 "
+                [disabled]="registerform.invalid">
+                <ng-container *ngIf="loading; else registerButtonContent">
+                  <div class="lds-hourglass"></div>
+                </ng-container>
+                <ng-template #registerButtonContent>register</ng-template>
+              </button>
+              <button (click)="LoginForm()" style="color: blue; text-align: center; margin-right: auto; margin-left: auto; display: block;">Login in Luftborn system</button>
+            </div>
+          </form>
+          <!-- <div class="text-center">
+            <p class="fs-5 ">You Dont Have An Account</p>
+            <a [routerLink]="['/register']" class="text-decoration-none text-info fs-5">Create New Account</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>

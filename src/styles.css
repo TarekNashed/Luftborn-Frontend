@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Style For All Button Like Bootstrap */
+/* styles.scss or your component's CSS file */
+::ng-deep .green-snackbar {
+  background-color: #4caf50; /* Green background color for success snack bar */
+  color: white; /* Text color */
+}
+
+::ng-deep .red-snackbar {
+  background-color: #f44336; /* Red background color for danger snack bar */
+  color: white; /* Text color */
+}
+
+button{
+  outline: none;
+  border:none;
+  padding:5px 20px;
+  border-radius:5px;
+  cursor: pointer;
+}
+.custom-button-success{
+  color : black;
+  transition:0.3s ease-in;
+  border:1px solid #5cb85c;
+}
+
+.custom-button-info{
+  color : black;
+  transition:0.3s ease-in;
+  border:1px solid #00a9c3;
+}
+  
+
+.custom-button-warning{
+  color : black;
+  transition:0.3s ease-in;
+  border:1px solid #f0ad4e;
+}
+
+.custom-button-danger{
+  color : black;
+  transition:0.3s ease-in;
+  border:1px solid #d9534f;
+}
+
+.custom-button-inverse{
+  color : black;
+  transition:0.3s ease-in;
+  border:1px solid #292b2c;
+}
+
+.custom-button-primary{
+  color : black;
+  transition:0.3s ease-in;
+  border:1px solid #0275d8;
+}
+
+.custom-button-faded{
+  color : black;
+  border:1px solid #f7f7f7;
+}
+/* //////////////////////////////// */
+
+
+
+.custom-button-success:hover{
+  color : white;
+  background-color: #5cb85c;
+}
+
+.custom-button-info:hover{
+  color : white;
+  background-color: #00a9c3;
+}
+  
+
+.custom-button-warning:hover{
+  color : white;
+  background-color: #f0ad4e;
+}
+
+.custom-button-danger:hover{
+  color : white;
+  background-color: #d9534f;
+}
+
+.custom-button-inverse:hover{
+  color : white;
+  background-color: #292b2c;
+}
+
+.custom-button-primary:hover{
+  color : white;
+  background-color: #0275d8;
+}
+
+.custom-button-faded:hover{
+  color : black;
+  background-color: #f7f7f7;
+}

@@ -1,0 +1,10 @@
+mat-form-field{
+  width: 100%;
+  height: auto;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

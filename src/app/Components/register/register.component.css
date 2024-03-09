@@ -1,0 +1,97 @@
+.form-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color:var(--main-text-color);
+  }
+  
+  .form-container .form {
+    width: 100%;
+    margin: 50px auto;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    padding: 40px 30px;
+    box-shadow: 0 0 10px 1px #ccc;
+  }
+  
+  
+  
+  
+  .lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .lds-hourglass:after {
+    content: " ";
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    /* margin: 8px; */
+    box-sizing: border-box;
+    border: 20px solid #f00;
+    border-color: #07d2ff transparent #07d2ff transparent;
+    animation: lds-hourglass 1.2s infinite;
+    top: 4px;
+  }
+  
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  
+  .btn-custom{
+    padding: 10px 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    background: #0275d8;
+    color: #fff;
+    transition: .3s;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-custom:hover{
+    background: transparent;
+    border: 1px solid #0275d8;
+    color: #055668;
+  }
+  
+  h1 {
+    background: -webkit-linear-gradient(#000000, #0275d8, rgb(119 97 81), #0275d8, rgb(233 207 122));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .img-hover-zoom{
+    text-align: center;
+    height: 60px;
+    transition: transform .4s ease;
+    filter: brightness(100%);
+  }
+  .img-hover-zoom:hover{
+    filter: brightness(110%);
+    transform: scale(1.18);
+  }
